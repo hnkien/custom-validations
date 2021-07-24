@@ -1,0 +1,96 @@
+{
+	"info": {
+		"_postman_id": "38e6d372-b6e6-4bc5-bb50-f4bcedc9c10f",
+		"name": "CustomValidations",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "oneFieldValidation - SALE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"modeOfPayment\": \"KEYED\",\n    \"transactionType\": \"SALE\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9191/v1/customvalidations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"v1",
+						"customvalidations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "twoFieldValidation - VOIDSALE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"modeOfPayment\": \"KEYED\",\n    \"transactionType\": \"VOIDSALE\",\n    \"reversalType\": \"CANCELLED\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9191/v1/customvalidations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"v1",
+						"customvalidations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "oneFieldValidation - VOIDSALE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"modeOfPayment\": \"KEYED\",\n    \"transactionType\": \"VOIDSALE\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9191/v1/customvalidations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"v1",
+						"customvalidations"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
